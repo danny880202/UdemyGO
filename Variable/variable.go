@@ -309,10 +309,10 @@ func SliceTest() {
 	//* 追加Slice元素
 	//& slice = append(slice, element1 , element2 ,...) => Slice為要被追加的Slice原切片
 	var SliceAdd []int
-	fmt.Printf("length=%d %d \n", len(SliceAdd), SliceAdd)
-	SliceAdd = append(SliceAdd, 0)
-	fmt.Printf("length=%d %d \n", len(SliceAdd), SliceAdd)
-	SliceAdd = append(SliceAdd, 1)
+	fmt.Printf("length=%d %d \n", len(SliceAdd), SliceAdd) //長度為0，所以輸出為空
+	SliceAdd = append(SliceAdd, 0)                         //追加元素，，輸出[0]
+	fmt.Printf("length=%d %d \n", len(SliceAdd), SliceAdd) //
+	SliceAdd = append(SliceAdd, 1)                         //追加元素，，輸出[0,1]
 
 	fmt.Printf("length=%d %d \n", len(SliceAdd), SliceAdd)
 	SliceAdd = append(SliceAdd, 2, 3, 4, 5)
@@ -458,7 +458,7 @@ func SwitchFallthrough() {
 		fmt.Println("夏天來了")
 	case 2:
 		fmt.Println("秋天來了")
-		fallthrough //貫穿 case，但只會貫穿而且只會輸出下一個case，其餘csae不會輸出
+		fallthrough //& 貫穿 case，會貫穿而且只會輸出下一個case，其餘csae不會輸出。即輸出case2和case3。
 	case 3:
 		fmt.Println("秋天天氣最爽啦!")
 	default:
