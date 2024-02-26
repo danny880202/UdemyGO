@@ -624,3 +624,19 @@ func Calculate(opr string) func(int, int) int {
 
 	return res
 }
+
+// * 結構體
+type Student struct {
+	//結構體成員，也稱為字段
+	id     int
+	name   string
+	age    int
+	city   string
+	gender string
+}
+
+type Student2 struct {
+	//結構體成員，也成為字段
+	id, age            int
+	name, city, gender string
+}
